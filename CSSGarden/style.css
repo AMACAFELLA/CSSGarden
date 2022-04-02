@@ -1,0 +1,741 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
+* {
+  padding: 0;
+}
+
+body {
+  background: #265d70;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+body div {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: 4fr;
+  grid-template-areas: "div";
+}
+@media (max-width: 767px) {
+  body div {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  body div {
+    display: grid;
+    align-items: start;
+    justify-items: center;
+    align-content: center;
+    justify-content: space-between;
+  }
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 767px) {
+  header[role=banner] {
+    padding: 6rem 0.1rem 8rem 8rem;
+    overflow: hidden;
+    background: linear-gradient(40deg, transparent 10%, rgba(255, 255, 255, 0.16) 60%, transparent 100%);
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  header[role=banner] h1,
+header[role=banner] h2 {
+    text-align: right;
+    margin-right: 3%;
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  #zen-summary p:nth-child(1) {
+    width: 30vw;
+    position: absolute;
+    bottom: 48%;
+    margin-left: 5%;
+    text-align: inherit;
+  }
+}
+@media (max-width: 767px) {
+  #zen-summary p:nth-child(2) {
+    position: relative;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 1em;
+    margin: 1em auto;
+    animation: bubble-move 1s infinite;
+  }
+  @keyframes bubble-move {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  nav[role=navigation] {
+    display: block;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    animation: pulse 1s infinite;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .preamble p:nth-child(4) {
+    position: relative;
+    font-size: small;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    padding: 3em;
+    padding-top: 4.2em;
+    margin: 1em auto;
+    animation: pulse 1s infinite;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #design-selection li:nth-child(-n+8) {
+    list-style-type: none;
+    position: relative;
+    color: black;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 2em;
+  }
+}
+@media (max-width: 767px) {
+  #design-selection li:nth-child(odd) {
+    margin-left: 7em;
+  }
+}
+@media (max-width: 767px) {
+  #design-selection li:nth-child(1) {
+    margin-top: 1em;
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 767px) {
+  #design-selection li:nth-child(even) {
+    margin-right: 4em;
+  }
+}
+
+@media (max-width: 767px) {
+  #design-archives h3 {
+    display: none;
+  }
+}
+#design-archives li {
+  list-style: none;
+}
+@media (max-width: 767px) {
+  #design-archives li:nth-child(-n+2) {
+    list-style-type: none;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 2em;
+    display: inline-block;
+    margin-top: 1em;
+    margin-left: 1em;
+  }
+}
+@media (max-width: 767px) {
+  #design-archives li:nth-child(1) {
+    margin-right: 1em;
+  }
+}
+
+@media (max-width: 767px) {
+  h3 {
+    margin-top: 1.4em;
+  }
+}
+
+@media (max-width: 767px) {
+  P {
+    margin-top: 1em;
+  }
+}
+
+@media (max-width: 767px) {
+  .explanation {
+    margin-top: 1rem;
+    width: 430px;
+    height: 50%;
+    position: relative;
+    padding: 10px 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 rgba(5, 16, 59, 0.3);
+    background: linear-gradient(40deg, transparent 10%, rgba(255, 255, 255, 0.16) 60%, transparent 100%);
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .participation {
+    margin-top: 1rem;
+    width: 430px;
+    height: 50%;
+    position: relative;
+    padding: 10px 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 rgba(5, 16, 59, 0.3);
+    background: linear-gradient(40deg, transparent 10%, rgba(255, 255, 255, 0.16) 60%, transparent 100%);
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .benefits {
+    margin-top: 1rem;
+    width: 430px;
+    height: 50%;
+    position: relative;
+    padding: 10px 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 rgba(5, 16, 59, 0.3);
+    background: linear-gradient(40deg, transparent 10%, rgba(255, 255, 255, 0.16) 60%, transparent 100%);
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .requirements {
+    margin-top: 1rem;
+    width: 430px;
+    height: 50%;
+    position: relative;
+    padding: 10px 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 rgba(5, 16, 59, 0.3);
+    background: linear-gradient(40deg, transparent 10%, rgba(255, 255, 255, 0.16) 60%, transparent 100%);
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  footer {
+    margin-top: 1.5em;
+    margin-left: 1em;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 768px) {
+  header[role=banner] {
+    padding: 6rem 0.1rem 8rem 8rem;
+    border: 1px solid black;
+    overflow: hidden;
+    background: linear-gradient(40deg, transparent 10%, rgba(255, 255, 255, 0.16) 60%, transparent 100%);
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) and (max-width: 767px) {
+  header[role=banner] h1,
+header[role=banner] h2 {
+    text-align: right;
+    margin-right: 3%;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  header {
+    display: grid;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  header[role=banner] h1,
+h2 {
+    text-align: right;
+    margin-right: 3%;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  #zen-summary p:nth-child(1) {
+    width: 30vw;
+    position: absolute;
+    bottom: 48%;
+    margin-left: -60%;
+    text-align: inherit;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  #zen-summary p:nth-child(2) {
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    border-radius: 60%;
+    width: 100px;
+    height: 76px;
+    padding: 2em;
+    margin: 1em auto;
+    margin-left: -28%;
+    margin-top: 15%;
+    z-index: 1;
+    position: absolute;
+    font-size: smaller;
+    animation: pulse 1s infinite;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .summary {
+    border: 1px solid black;
+    border-top: hidden;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  #zen-preamble p:nth-child(2) {
+    width: 50%;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  #zen-preamble {
+    margin-top: 50%;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  #zen-preamble p:nth-child(4) {
+    position: absolute;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  #zen-preamble p:nth-child(-n+3) {
+    width: 38%;
+    margin-right: 40%;
+    margin-top: 5%;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  #zen-preamble h3 {
+    margin-left: -40%;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  #zen-preamble p:nth-child(4) {
+    border-radius: 50%;
+    width: 200px;
+    height: 160px;
+    top: 420px;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    padding: 4em;
+    margin-left: 60%;
+    z-index: 1;
+    position: absolute;
+    font-size: small;
+    animation: pulse 1s infinite;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  #zen-explanation {
+    position: absolute;
+    margin-left: 50%;
+    padding: 10px 20px;
+    overflow: hidden;
+    background: linear-gradient(40deg, transparent 10%, rgba(255, 255, 255, 0.16) 60%, transparent 100%);
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .participation {
+    margin-top: 88%;
+    width: 40%;
+    margin-right: 30%;
+    padding: 10px 20px;
+    overflow: hidden;
+    background: linear-gradient(40deg, transparent 10%, rgba(255, 255, 255, 0.16) 60%, transparent 100%);
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+  }
+}
+@media (min-width: 768px) {
+  .benefits {
+    margin-top: 86%;
+    width: 30%;
+    margin-right: -50%;
+    position: absolute;
+    padding: 10px 20px 255px;
+    overflow: hidden;
+    background: linear-gradient(40deg, transparent 10%, rgba(255, 255, 255, 0.16) 60%, transparent 100%);
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+@media (min-width: 768px) {
+  #zen-requirements {
+    grid-column: 1;
+    margin-top: 10%;
+    width: 70%;
+    position: relative;
+    padding: 10px 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 rgba(5, 16, 59, 0.3);
+    background: linear-gradient(40deg, transparent 10%, rgba(255, 255, 255, 0.16) 60%, transparent 100%);
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+@media (min-width: 768px) {
+  nav[role=navigation] {
+    max-width: 640px;
+    width: 100%;
+  }
+}
+
+#design-selection li:nth-child(1) {
+  left: 15%;
+}
+@media (min-width: 768px) {
+  #design-selection li:nth-child(1) {
+    list-style-type: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 1em;
+    display: inline-block;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    z-index: 1;
+    font-size: small;
+    position: absolute;
+    margin-left: -50%;
+    margin-top: -95%;
+  }
+}
+
+@media (min-width: 768px) {
+  #design-selection li:nth-child(2) {
+    list-style-type: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 1em;
+    display: inline-block;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    z-index: 1;
+    left: 32%;
+    position: absolute;
+    margin-left: -32%;
+    margin-top: -70%;
+    font-size: small;
+  }
+}
+
+@media (min-width: 768px) {
+  #design-selection li:nth-child(3) {
+    list-style-type: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 1em;
+    display: inline-block;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    z-index: 1;
+    margin-right: -55%;
+  }
+}
+
+@media (min-width: 768px) {
+  #design-selection li:nth-child(4) {
+    list-style-type: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 1em;
+    display: inline-block;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    z-index: 1;
+    margin-top: -29%;
+    margin-left: -50%;
+    font-size: small;
+    position: absolute;
+  }
+}
+
+@media (min-width: 768px) {
+  #design-selection li:nth-child(5) {
+    list-style-type: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 1em;
+    display: inline-block;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    z-index: 1;
+    margin-top: -55%;
+    font-size: small;
+    position: absolute;
+    left: 1%;
+  }
+}
+
+@media (min-width: 768px) {
+  #design-selection li:nth-child(6) {
+    list-style-type: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 1em;
+    display: inline-block;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    z-index: 1;
+    margin-left: -50%;
+    margin-top: -42%;
+    position: absolute;
+    font-size: small;
+  }
+}
+
+@media (min-width: 768px) {
+  #design-selection li:nth-child(7) {
+    list-style-type: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 1em;
+    display: inline-block;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    z-index: 1;
+    margin-left: -50%;
+    font-size: small;
+    position: absolute;
+    margin-top: -83%;
+  }
+}
+
+@media (min-width: 768px) {
+  #design-selection li:nth-child(8) {
+    list-style-type: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 1em;
+    display: inline-block;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    z-index: 1;
+    margin-left: -75%;
+    margin-top: -60%;
+    position: absolute;
+    font-size: small;
+  }
+}
+
+@media (min-width: 768px) {
+  .archives {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  h3.resources,
+h3.select {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #zen-resources li:nth-child(2) {
+    list-style-type: none;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    border-radius: 60%;
+    padding: 2em;
+    z-index: 1;
+    position: absolute;
+    margin-left: 40%;
+    margin-top: -89%;
+  }
+}
+
+@media (min-width: 768px) {
+  #zen-resources li:nth-child(3) {
+    list-style-type: none;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    border-radius: 60%;
+    padding: 2em;
+    z-index: 1;
+    position: absolute;
+    margin-left: 39%;
+    margin-top: -110%;
+  }
+}
+
+@media (min-width: 768px) {
+  #zen-resources li:nth-child(4) {
+    list-style-type: none;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    border-radius: 60%;
+    padding: 2em;
+    z-index: 1;
+    position: absolute;
+    margin-left: 40%;
+    margin-top: -125%;
+  }
+}
+
+@media (min-width: 768px) {
+  #zen-resources li:nth-child(5) {
+    list-style-type: none;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    border-radius: 60%;
+    padding: 2em;
+    z-index: 1;
+    position: absolute;
+    margin-left: 35%;
+    margin-top: -145%;
+  }
+}
+
+@media (min-width: 768px) {
+  #zen-resources li:nth-child(1) {
+    list-style-type: none;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    border-radius: 60%;
+    padding: 2em;
+    z-index: 1;
+    position: absolute;
+    margin-left: 40%;
+    margin-top: -165%;
+  }
+}
+
+@media (min-width: 768px) {
+  .next a {
+    list-style-type: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 1em;
+    display: inline-block;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    z-index: 1;
+    margin-left: -10%;
+  }
+}
+
+@media (min-width: 768px) {
+  .viewall a {
+    list-style-type: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    padding: 1em;
+    display: inline-block;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD, inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff, inset 15px -25px 20px #2EC0FB;
+    z-index: 1;
+    margin-left: 13%;
+    margin-top: -18%;
+    position: absolute;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

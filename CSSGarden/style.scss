@@ -1,0 +1,747 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
+//set breakpoint sizes
+$break-small: 767px;
+$break-large: 768px;
+$blue: #05103b;
+$white: #fff;
+//color scheme reference of soap bubble https://www.schemecolor.com/colors-of-a-soap-bubble.php
+@mixin breakpoint($break) {
+  @if $break == large {
+    @media (min-width: $break-large) {
+      @content;
+    }
+  } @else if $break == small {
+    @media (max-width: $break-small) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $break-small) and (max-width: $break-large) {
+      @content;
+    }
+  }
+}
+@mixin grid-container() {
+  display: -ms-grid;
+  display: grid;
+}
+@mixin select {
+  list-style-type: none;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  padding: 1em;
+  display: inline-block;
+  box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD,
+      inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff,
+      inset 15px -25px 20px #2EC0FB;
+  z-index: 1;
+}
+@mixin select-res {
+  list-style-type: none;
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD,
+      inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff,
+      inset 15px -25px 20px #2EC0FB;
+  border-radius: 60%;
+  padding: 2em;
+  z-index: 1;
+  position: absolute;
+}
+@mixin resources {
+  list-style-type: none;
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  padding: 1em;
+  position: absolute;
+}
+//Declare variables
+$first-background-color: #d3d3d3;
+* {
+  padding: 0;
+}
+body {
+  //linear-gradient background
+  background: rgb(38, 93, 112);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  div {
+    @include grid-container;
+    grid-template-columns: 4fr;
+    grid-template-areas: "div";
+    @include breakpoint(small) {
+      display: block;
+    }
+    @include breakpoint(large) {
+      display: grid;
+      align-items: start;
+      justify-items: center;
+      align-content: center;
+      justify-content: space-between;
+    }
+  }
+}
+a {
+  &:link {
+    text-decoration: none;
+    color: white;
+  }
+}
+header[role="banner"] {
+  @include breakpoint(small) {
+    padding: 6rem 0.1rem 8rem 8rem;
+    overflow: hidden;
+    background: linear-gradient(
+      40deg,
+      transparent 10%,
+      rgba(255, 255, 255, 0.16) 60%,
+      transparent 100%
+    );
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+    h1,
+    h2 {
+      @include breakpoint(small) {
+        text-align: right;
+        margin-right: 3%;
+      }
+    }
+  }
+}
+header {
+  @include breakpoint(small) {
+    display: block;
+  }
+}
+#zen-summary {
+  p {
+    &:nth-child(1) {
+      @include breakpoint(small) {
+        width: 30vw;
+        position: absolute;
+        bottom: 48%;
+        margin-left: 5%;
+        text-align: inherit;
+      }
+    }
+    &:nth-child(2) {
+      @include breakpoint(small) {
+        position: relative;
+        box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD,
+            inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff,
+            inset 15px -25px 20px #2EC0FB;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        padding: 1em;
+        margin: 1em auto;
+        //animate bubble move up and down
+        animation: bubble-move 1s infinite;
+        @keyframes bubble-move {
+          0% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(10px);
+          }
+          100% {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+}
+
+nav[role="navigation"] {
+  @include breakpoint(small) {
+    display: block;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    //animate and pulse
+    animation: pulse 1s infinite;
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  }
+}
+.preamble p:nth-child(4) {
+  @include breakpoint(small) {
+    position: relative;
+    font-size: small;
+    box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD,
+        inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff,
+        inset 15px -25px 20px #2EC0FB;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    padding: 3em;
+    padding-top: 4.2em;
+    margin: 1em auto;
+    //animate and pulse effect
+    animation: pulse 1s infinite;
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+  }
+}
+#design-selection {
+  li {
+    &:nth-child(-n + 8) {
+      @include breakpoint(small) {
+        list-style-type: none;
+        position: relative;
+        color: black;
+        box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD,
+            inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff,
+            inset 15px -25px 20px #2EC0FB;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        padding: 2em;
+      }
+    }
+    &:nth-child(odd) {
+      @include breakpoint(small) {
+        margin-left: 7em;
+      }
+    }
+    &:nth-child(1) {
+      @include breakpoint(small) {
+        margin-top: 1em;
+        width: 100px;
+        height: 100px;
+      }
+    }
+    &:nth-child(even) {
+      @include breakpoint(small) {
+        margin-right: 4em;
+      }
+    }
+  }
+}
+#design-archives {
+  h3 {
+    @include breakpoint(small) {
+      display: none;
+    }
+  }
+  li {
+    list-style: none;
+    &:nth-child(-n + 2) {
+      @include breakpoint(small) {
+        list-style-type: none;
+        box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD,
+            inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff,
+            inset 15px -25px 20px #2EC0FB;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        padding: 2em;
+        display: inline-block;
+        margin-top: 1em;
+        margin-left: 1em;
+      }
+    }
+    &:nth-child(1) {
+      @include breakpoint(small) {
+        margin-right: 1em;
+      }
+    }
+  }
+}
+h3 {
+  @include breakpoint(small) {
+    margin-top: 1.4em;
+  }
+}
+P {
+  @include breakpoint(small) {
+    margin-top: 1em;
+  }
+}
+.explanation {
+  @include breakpoint(small) {
+    margin-top: 1rem;
+    width: 430px;
+    height: 50%;
+    position: relative;
+    padding: 10px 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 rgba($blue, 0.3);
+    background: linear-gradient(
+      40deg,
+      transparent 10%,
+      rgba($white, 0.16) 60%,
+      transparent 100%
+    );
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1.5px solid rgba($white, 0.08);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.participation {
+  @include breakpoint(small) {
+    margin-top: 1rem;
+    width: 430px;
+    height: 50%;
+    position: relative;
+    padding: 10px 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 rgba($blue, 0.3);
+    background: linear-gradient(
+      40deg,
+      transparent 10%,
+      rgba($white, 0.16) 60%,
+      transparent 100%
+    );
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1.5px solid rgba($white, 0.08);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.benefits {
+  @include breakpoint(small) {
+    margin-top: 1rem;
+    width: 430px;
+    height: 50%;
+    position: relative;
+    padding: 10px 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 rgba($blue, 0.3);
+    background: linear-gradient(
+      40deg,
+      transparent 10%,
+      rgba($white, 0.16) 60%,
+      transparent 100%
+    );
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1.5px solid rgba($white, 0.08);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.requirements {
+  @include breakpoint(small) {
+    margin-top: 1rem;
+    width: 430px;
+    height: 50%;
+    position: relative;
+    padding: 10px 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 rgba($blue, 0.3);
+    background: linear-gradient(
+      40deg,
+      transparent 10%,
+      rgba($white, 0.16) 60%,
+      transparent 100%
+    );
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1.5px solid rgba($white, 0.08);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+footer {
+  @include breakpoint(small) {
+    margin-top: 1.5em;
+    margin-left: 1em;
+  }
+}
+
+//large screen---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+@include breakpoint(large) {
+  header[role="banner"] {
+    @include breakpoint(large) {
+      padding: 6rem 0.1rem 8rem 8rem;
+      border: 1px solid black;
+      overflow: hidden;
+      background: linear-gradient(
+        40deg,
+        transparent 10%,
+        rgba(255, 255, 255, 0.16) 60%,
+        transparent 100%
+      );
+      backdrop-filter: blur(7px);
+      border-radius: 10px;
+      border: 1.5px solid rgba(255, 255, 255, 0.08);
+      h1,
+      h2 {
+        @include breakpoint(small) {
+          text-align: right;
+          margin-right: 3%;
+        }
+      }
+    }
+  }
+  header {
+    @include breakpoint(large) {
+      display: grid;
+    }
+  }
+  header[role="banner"] h1,
+  h2 {
+    @include breakpoint(large) {
+      text-align: right;
+      margin-right: 3%;
+    }
+  }
+  #zen-summary p:nth-child(1) {
+    @include breakpoint(large) {
+      width: 30vw;
+      position: absolute;
+      bottom: 48%;
+      margin-left: -60%;
+      text-align: inherit;
+    }
+  }
+  #zen-summary p:nth-child(2) {
+    @include breakpoint(large) {
+      box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD,
+          inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff,
+          inset 15px -25px 20px #2EC0FB;
+      border-radius: 60%;
+      width: 100px;
+      height: 76px;
+      padding: 2em;
+      margin: 1em auto;
+      margin-left: -28%;
+      margin-top: 15%;
+      z-index: 1;
+      position: absolute;
+      font-size: smaller;
+      //animate and pulse
+      animation: pulse 1s infinite;
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+  .summary {
+    @include breakpoint(large) {
+      border: 1px solid black;
+      border-top: hidden;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  }
+  .preamble {
+    @include breakpoint(large) {
+    }
+  }
+  #zen-preamble p:nth-child(2) {
+    @include breakpoint(large) {
+      width: 50%;
+    }
+  }
+  #zen-preamble {
+    @include breakpoint(large) {
+      margin-top: 50%;
+    }
+  }
+  #zen-preamble p:nth-child(4) {
+    @include breakpoint(large) {
+      position: absolute;
+    }
+  }
+  #zen-preamble p:nth-child(-n + 3) {
+    @include breakpoint(large) {
+      width: 38%;
+      margin-right: 40%;
+      margin-top: 5%;
+    }
+  }
+  #zen-preamble h3 {
+    @include breakpoint(large) {
+      margin-left: -40%;
+    }
+  }
+  #zen-preamble p:nth-child(4) {
+    @include breakpoint(large) {
+      border-radius: 50%;
+      width: 200px;
+      height: 160px;
+      top: 420px;
+      box-shadow: inset 0 0 10px #fff, inset -10px 10px 15px #E36CFD,
+          inset 5px 5px 10px #F9E033, inset -5px 5px 20px #fff,
+          inset 15px -25px 20px #2EC0FB;
+      padding: 4em;
+      margin-left: 60%;
+      z-index: 1;
+      position: absolute;
+      font-size: small;
+      //animate and pulse
+      animation: pulse 1s infinite;
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+    }
+  }
+
+  #zen-explanation {
+    @include breakpoint(large) {
+      position: absolute;
+      margin-left: 50%;
+      padding: 10px 20px;
+      overflow: hidden;
+      background: linear-gradient(
+        40deg,
+        transparent 10%,
+        rgba(255, 255, 255, 0.16) 60%,
+        transparent 100%
+      );
+      backdrop-filter: blur(7px);
+      border-radius: 10px;
+      border: 1.5px solid rgba(255, 255, 255, 0.08);
+    }
+  }
+  .participation {
+    @include breakpoint(large) {
+      margin-top: 88%;
+      width: 40%;
+      margin-right: 30%;
+      padding: 10px 20px;
+      overflow: hidden;
+      background: linear-gradient(
+        40deg,
+        transparent 10%,
+        rgba(255, 255, 255, 0.16) 60%,
+        transparent 100%
+      );
+      backdrop-filter: blur(7px);
+      border-radius: 10px;
+      border: 1.5px solid rgba(255, 255, 255, 0.08);
+    }
+  }
+}
+
+.benefits {
+  @include breakpoint(large) {
+    margin-top: 86%;
+    width: 30%;
+    margin-right: -50%;
+    position: absolute;
+    padding: 10px 20px 255px;
+    overflow: hidden;
+    background: linear-gradient(
+      40deg,
+      transparent 10%,
+      rgba(255, 255, 255, 0.16) 60%,
+      transparent 100%
+    );
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+#zen-requirements {
+  @include breakpoint(large) {
+    grid-column: 1;
+    margin-top: 10%;
+    width: 70%;
+    position: relative;
+    padding: 10px 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 0 rgba($blue, 0.3);
+    background: linear-gradient(
+      40deg,
+      transparent 10%,
+      rgba($white, 0.16) 60%,
+      transparent 100%
+    );
+    backdrop-filter: blur(7px);
+    border-radius: 10px;
+    border: 1.5px solid rgba($white, 0.08);
+  }
+}
+nav[role="navigation"] {
+  @include breakpoint(large) {
+    max-width: 640px;
+    width: 100%;
+  }
+}
+#design-selection li:nth-child(1) {
+  @include breakpoint(large) {
+    @include select();
+    font-size: small;
+    position: absolute;
+    margin-left: -50%;
+    margin-top: -95%;
+  }
+  left: 15%;
+}
+#design-selection li:nth-child(2) {
+  @include breakpoint(large) {
+    @include select();
+    left: 32%;
+    position: absolute;
+    margin-left: -32%;
+    margin-top: -70%;
+    font-size: small;
+  }
+}
+#design-selection li:nth-child(3) {
+  @include breakpoint(large) {
+    @include select();
+    margin-right: -55%;
+  }
+}
+#design-selection li:nth-child(4) {
+  @include breakpoint(large) {
+    @include select();
+    margin-top: -29%;
+    margin-left: -50%;
+    font-size: small;
+    position: absolute;
+  }
+}
+#design-selection li:nth-child(5) {
+  @include breakpoint(large) {
+    @include select();
+    margin-top: -55%;
+    font-size: small;
+    position: absolute;
+    left: 1%;
+  }
+}
+#design-selection li:nth-child(6) {
+  @include breakpoint(large) {
+    @include select();
+    margin-left: -50%;
+    margin-top: -42%;
+    position: absolute;
+    font-size: small;
+  }
+}
+#design-selection li:nth-child(7) {
+  @include breakpoint(large) {
+    @include select();
+    margin-left: -50%;
+    font-size: small;
+    position: absolute;
+    margin-top: -83%;
+  }
+}
+#design-selection li:nth-child(8) {
+  @include breakpoint(large) {
+    @include select();
+    margin-left: -75%;
+    margin-top: -60%;
+    position: absolute;
+    font-size: small;
+  }
+}
+.archives {
+  @include breakpoint(large) {
+    display: none;
+  }
+}
+h3.resources,
+h3.select {
+  @include breakpoint(large) {
+    display: none;
+  }
+}
+
+#zen-resources li:nth-child(2) {
+  @include breakpoint(large) {
+    @include select-res();
+    margin-left: 40%;
+    margin-top: -89%;
+  }
+}
+#zen-resources li:nth-child(3) {
+  @include breakpoint(large) {
+    @include select-res();
+    margin-left: 39%;
+    margin-top: -110%;
+  }
+}
+#zen-resources li:nth-child(4) {
+  @include breakpoint(large) {
+    @include select-res();
+    margin-left: 40%;
+    margin-top: -125%;
+  }
+}
+#zen-resources li:nth-child(5) {
+  @include breakpoint(large) {
+    @include select-res();
+    margin-left: 35%;
+    margin-top: -145%;
+  }
+}
+#zen-resources li:nth-child(1) {
+  @include breakpoint(large) {
+    @include select-res();
+    margin-left: 40%;
+    margin-top: -165%;
+  }
+}
+.next a {
+  @include breakpoint(large) {
+    @include select();
+    margin-left: -10%;
+  }
+}
+
+.viewall a {
+  @include breakpoint(large) {
+    @include select();
+    margin-left: 13%;
+    margin-top: -18%;
+    position: absolute;
+  }
+}
